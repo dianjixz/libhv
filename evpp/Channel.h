@@ -234,7 +234,7 @@ class SocketChannel : public Channel {
 public:
     std::function<void()>   onconnect; // only for TcpClient
     std::function<void()>   heartbeat;
-
+    void*                   usrPrivatePtr;
     SocketChannel(hio_t* io) : Channel(io) {
     }
     virtual ~SocketChannel() {}
